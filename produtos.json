@@ -25,5 +25,59 @@
     "pricePromo": 44.9,
     "sizes": "17/18 | 22 | 25 | 26/27",
     "image": "https://cloviscalcados.vteximg.com.br/arquivos/ids/1781975-1024-1024/Mini-Melissa-Sun-Downtown-Baby-35771-0855771_026-03.jpg?v=639280358283130000"
+  },
+  {
+    "id": 1792699081958,
+    "title": "FLOX BB AMARELO GLITER",
+    "category": "bebe",
+    "priceOriginal": 149.9,
+    "pricePromo": 74.9,
+    "sizes": "20/21",
+    "image": "https://ludique.fbitsstatic.net/img/p/sandalia-baby-mini-melissa-flox-bb-31675-152981/361023-6.jpg"
+  },
+  {
+    "id": 1792699331355,
+    "title": "FLOX INF AMARELO",
+    "category": "infantil",
+    "priceOriginal": 169.9,
+    "pricePromo": 84.9,
+    "sizes": "28 | 29 | 31",
+    "image": "https://cloviscalcados.vteximg.com.br/arquivos/ids/1752703-1024-1024/Mini-Melissa-Flox-Infantil-31735-0851735_025-01.jpg"
+  },
+  {
+    "id": 1792699409555,
+    "title": "FLOX BB ROSA",
+    "category": "bebe",
+    "priceOriginal": 149.9,
+    "pricePromo": 74.9,
+    "sizes": "20/21 | 22",
+    "image": "https://cloviscalcados.vteximg.com.br/arquivos/ids/1753197-1024-1024/Mini-Melissa-Flox-Infantil-31735-0851735_035-02.jpg"
+  },
+  {
+    "id": 1792699564689,
+    "title": "MELISSA BEACH SLIDE AD PRETO",
+    "category": "adulto",
+    "priceOriginal": 149.9,
+    "pricePromo": 59.9,
+    "sizes": "42",
+    "image": "https://static.dafiti.com.br/p/melissa-rasteira-slide-melissa-beach-preta-2252-2617364-1-zoom.jpg"
+  },
+  {
+    "id": 1792699631009,
+    "title": "MELISSA BEACH SLIDE AD BRANCO",
+    "category": "adulto",
+    "priceOriginal": 149.9,
+    "pricePromo": 59.9,
+    "sizes": "41",
+    "image": "https://static.dafiti.com.br/p/Melissa-Chinelo-Melissa-Beach-Slide-Branco-2759-4517364-2-zoom.jpg"
+  },
+  {
+    "id": 1792699812904,
+    "title": "MELISSA VIXEN AD AZUL PEROLA",
+    "category": "adulto",
+    "priceOriginal": 279.9,
+    "pricePromo": 139.9,
+    "sizes": "33/34",
+    "image": "https://a-static.mlcdn.com.br/800x800/sandalia-melissa-vixen-adulto-azul-perolado/melshoesoficial/17631-101735/1b67ae6e264e3589d8e2471320abe9a8.jpeg"
   }
 ]
