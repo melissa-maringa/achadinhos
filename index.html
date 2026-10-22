@@ -76,14 +76,14 @@
     </footer>
 
     <script>
-        const whatsappNumber = "5544999999999"; 
+        const whatsappNumber = "554499814406"; 
         let products = []; 
 
         function formatMoney(value) { return value.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' }); }
         function calculateDiscount(oldP, newP) { return Math.round(((oldP - newP) / oldP) * 100); }
 
         function getWhatsAppLink(product) {
-            const text = `Oi! Vi o catálogo e quero comprar o modelo:\n\n*${product.title}*\nPor: *${formatMoney(product.pricePromo)}*\n\nQuais tamanhos ainda tem?`;
+            const text = `Oi! Vi o catálogo e quero comprar o modelo:\n\n*${product.title}*\nPor: *${formatMoney(product.pricePromo)}*`;
             return `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(text)}`;
         }
 
