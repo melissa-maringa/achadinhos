@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Painel - Catálogo Melissa (GitHub Pages)</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style> 
+        body { background-color: #f4f6f9; padding: 2rem; } 
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2 class="mb-4">⚙️ Painel de Controle (Modo Estático)</h2>
+
+        <!-- AVISO SOBRE ESTATÍSTICAS -->
+        <div class="row mb-4">
+            <div class="col-12">
+                <div class="alert alert-warning shadow-sm" role="alert">
+                    <h5 class="alert-heading">📊 Cadê as Estatísticas?</h5>
+                    <p class="mb-0">Como o GitHub Pages não possui banco de dados (PHP), o contador interno de acessos foi desativado.<br>
+                    <strong>Solução:</strong> Para medir visitas e cliques com precisão no GitHub, recomendamos que você crie uma conta gratuita no <b>Google Analytics (GA4)</b> e cole o script deles no cabeçalho (<code>&lt;head&gt;</code>) do seu arquivo <code>index.html</code>.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <!-- FORMULÁRIO DE CADASTRO -->
+            <div class="col-md-4 mb-4">
+                <div class="card shadow-sm p-4">
+                    <h4>Adicionar Produto</h4>
+                    <form id="formProduto">
+                        <div class="mb-2">
+                            <label>Nome do Modelo</label>
+                            <input type="text" id="title" class="form-control" required>
+                        </div>
+                        <div class="mb-2">
+                            <label>Categoria</label>
+                            <select id="category" class="form-select" required>
+                                <option value="bebe">Mini (17 ao 28)</option>
+                                <option value="infantil">Mel (26 ao 33)</option>
+                                <option value="adulto">Adulto (33 ao 40)</option>
+                            </select>
+                        </div>
+                        <div class="row mb-2">
+                            <div class="col-6">
+                                <label>Preço "De" (R$)</label>
+                                <input type="number" step="0.01" id="oldPrice" class="form-control" placeholder="189.90" required>
+                            </div>
+                            <div class="col-6">
+                                <label>Preço "Por" (R$)</label>
+                                <input type="number" step="0.01" id="newPrice" class="form-control" placeholder="79.90" required>
+                            </div>
+                        </div>
+                        <div class="mb-2">
+                            <label>Tamanhos Disponíveis</label>
+                            <input type="text" id="sizes" class="form-control" placeholder="Ex: 35 | 36 | 38" required>
+                        </div>
+                        <div class="mb-3">
+                            <label>Link da Imagem</label>
+                            <input type="url" id="image" class="form-control" placeholder="https://..." required>
+                        </div>
+                        <button type="submit" class="btn btn-dark w-100">Adicionar à Lista</button>
+                    </form>
+                </div>
+            </div>
+
+            <!-- LISTA DE PRODUTOS E GERADOR -->
+            <div class="col-md-8">
+                <div class="card shadow-sm p-4">
+                    <div class="d-flex justify-content-between mb-3 align-items-center">
+                        <h4 class="mb-0">Produtos Cadastrados</h4>
+                        <button onclick="baixarJSON()" class="btn btn-success fw-bold">⬇️ BAIXAR PRODUTOS.JSON</button>
+                    </div>
+                    <p class="text-muted small"><b>Instruções para o GitHub Pages:</b> Após clicar no botão acima, vá até a página do seu repositório no GitHub, clique em <b>"Add file" > "Upload files"</b>, envie o novo arquivo <code>produtos.json</code> substituindo o antigo e confirme o commit.</p>
+                    <div class="table-responsive">
+                        <table class="table table-striped align-middle">
+                            <thead>
+                                <tr>
+                                    <th>Foto</th>
+                                    <th>Nome</th>
+                                    <th>Preço Promo</th>
+                                    <th>Ação</th>
+                                </tr>
+                            </thead>
+                            <tbody id="tabelaCorpo"></tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let catalogo = [];
+
+        // 1. CARREGAR PRODUTOS EXISTENTES PARA EDIÇÃO
+        fetch('produtos.json')
+            .then(res => res.json())
+            .then(data => { catalogo = data; atualizarTabela(); })
+            .catch(e => console.log('Iniciando catálogo vazio.'));
+
+        // 2. ADICIONAR NOVO PRODUTO
+        document.getElementById('formProduto').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const novo = {
+                id: Date.now(), 
+                title: document.getElementById('title').value,
+                category: document.getElementById('category').value,
+                priceOriginal: parseFloat(document.getElementById('oldPrice').value),
+                pricePromo: parseFloat(document.getElementById('newPrice').value),
+                sizes: document.getElementById('sizes').value,
+                image: document.getElementById('image').value
+            };
+            catalogo.push(novo);
+            atualizarTabela();
+            this.reset();
+        });
+
+        // 3. ATUALIZAR TABELA NA TELA
+        function atualizarTabela() {
+            const tbody = document.getElementById('tabelaCorpo');
+            tbody.innerHTML = '';
+            catalogo.forEach(item => {
+                tbody.innerHTML += `
+                    <tr>
+                        <td><img src="${item.image}" width="40" height="40" style="object-fit:cover; border-radius:5px;"></td>
+                        <td>${item.title}<br><small class="text-muted">${item.category}</small></td>
+                        <td>R$ ${item.pricePromo.toFixed(2).replace('.', ',')}</td>
+                        <td><button onclick="removerItem(${item.id})" class="btn btn-sm btn-danger">Excluir</button></td>
+                    </tr>
+                `;
+            });
+        }
+
+        // 4. REMOVER ITEM
+        function removerItem(id) {
+            catalogo = catalogo.filter(item => item.id !== id);
+            atualizarTabela();
+        }
+
+        // 5. GERAR E BAIXAR O ARQUIVO JSON NOVO
+        function baixarJSON() {
+            if(catalogo.length === 0) return alert("Adicione pelo menos 1 produto!");
+            const dataStr = JSON.stringify(catalogo, null, 2);
+            const blob = new Blob([dataStr], { type: "application/json" });
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = "produtos.json";
+            a.click();
+            URL.revokeObjectURL(url);
+        }
+    </script>
+</body>
+</html>
