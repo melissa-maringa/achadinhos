@@ -87,6 +87,17 @@
             return `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(text)}`;
         }
 
+        // Nova função para embaralhar os itens do array de forma aleatória
+        function shuffleArray(array) {
+            let currentIndex = array.length, randomIndex;
+            while (currentIndex !== 0) {
+                randomIndex = Math.floor(Math.random() * currentIndex);
+                currentIndex--;
+                [array[currentIndex], array[randomIndex]] = [array[randomIndex], array[currentIndex]];
+            }
+            return array;
+        }
+
         function renderProducts(items) {
             const grid = document.getElementById('productGrid');
             grid.innerHTML = '';
@@ -96,7 +107,10 @@
                 return;
             }
 
-            items.forEach(product => {
+            // Embaralha a lista antes de inseri-la no HTML
+            const randomizedItems = shuffleArray([...items]);
+
+            randomizedItems.forEach(product => {
                 const discount = calculateDiscount(product.priceOriginal, product.pricePromo);
                 
                 const cardHtml = `
@@ -136,12 +150,12 @@
         }
 
         document.addEventListener('DOMContentLoaded', () => { 
-            // Fetch limpo puxando apenas o JSON de produtos
+            // Fetch puxando o JSON de produtos
             fetch('produtos.json')
                 .then(res => res.json())
                 .then(data => {
-                    // Ordena os produtos do MENOR para o MAIOR preço promocional
-                    products = data.sort((a, b) => a.pricePromo - b.pricePromo);
+                    // Armazena os dados sem a função '.sort()' que forçava a ordem pelo preço
+                    products = data;
                     renderProducts(products);
                 })
                 .catch(e => {
