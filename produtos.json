@@ -24,7 +24,7 @@
     "priceOriginal": 89.9,
     "pricePromo": 44.9,
     "sizes": "17/18 | 22 | 25 | 26/27",
-    "image": "https://cloviscalcados.vteximg.com.br/arquivos/ids/1781975-1024-1024/Mini-Melissa-Sun-Downtown-Baby-35771-0855771_026-03.jpg?v=639280358283130000"
+    "image": "https://cloviscalcados.vteximg.com.br/arquivos/ids/1787206-1024-1024/Mini-Melissa-Sun-Downtown-Baby-35771-0855771_026-01.jpg"
   },
   {
     "id": 1792699081958,
@@ -106,5 +106,68 @@
     "pricePromo": 87.9,
     "sizes": "36 | 37",
     "image": "https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcSC6qKTt00yil4dZviZDx8_c_qr4Ffp-VJEUfyigX9OBmr9hz7NXpaGnCi9hjvIzNkteOWHpmLJNY1QV5c-757U2MJ_qd2ULj9hQJalIQHcKXJFMzoq2u5nIqKtuQckSgyLOmtOys8&usqp=CAc"
+  },
+  {
+    "id": 1793021773632,
+    "title": "Ultragirl + Hello Kitty ROSA",
+    "category": "bebe",
+    "priceOriginal": 159.9,
+    "pricePromo": 95.9,
+    "sizes": "17/18 | 19 | 22 | 23/24 | 25",
+    "image": "https://www.melissa.com.br/ccstore/v1/images/?source=/file/v975151327005096871/products/cor.37873.37873BS71210_o.jpg"
+  },
+  {
+    "id": 1793021839198,
+    "title": "Ultragirl + Hello Kitty LILAS",
+    "category": "bebe",
+    "priceOriginal": 159.9,
+    "pricePromo": 95.9,
+    "sizes": "19 | 22 | 25 | 26/27",
+    "image": "https://www.melissa.com.br/ccstore/v1/images/?source=/file/v4482746645334278438/products/cor.37873.37873BS72210_o.jpg"
+  },
+  {
+    "id": 1793022325907,
+    "title": "Kick Off + Hello Kitty BEGE",
+    "category": "adulto",
+    "priceOriginal": 379.9,
+    "pricePromo": 227.9,
+    "sizes": "38",
+    "image": "https://meninashoes.vtexassets.com/arquivos/ids/531073-800-800?v=638931222429130000&width=800&height=800&aspect=true"
+  },
+  {
+    "id": 1793022472106,
+    "title": "PULSE ROSA",
+    "category": "adulto",
+    "priceOriginal": 299.9,
+    "pricePromo": 179.9,
+    "sizes": "36",
+    "image": "https://www.melissa.com.br/ccstore/v1/images/?source=/file/v6562426953567279731/products/cor.36854.36854BT83612_o.jpg?height=2500&width=2500"
+  },
+  {
+    "id": 1793022621786,
+    "title": "PULSE ONCA",
+    "category": "adulto",
+    "priceOriginal": 299.9,
+    "pricePromo": 179.9,
+    "sizes": "33/34 | 35 | 36 | 37",
+    "image": "https://www.melissa.com.br/ccstore/v1/images/?source=/file/v1585136381082769544/products/cor.36854.36854BK88511_o.jpg?height=2500&width=2500"
+  },
+  {
+    "id": 1793022696656,
+    "title": "PULSE BEGE",
+    "category": "adulto",
+    "priceOriginal": 299.9,
+    "pricePromo": 179.9,
+    "sizes": "33/34 | 37",
+    "image": "https://meninashoes.vtexassets.com/arquivos/ids/492781/36854-Melissa-Pulse-Cor-BK887---BEGE-variacao3.jpg.jpg?v=638763678482900000"
+  },
+  {
+    "id": 1793023493834,
+    "title": "Coturno PRETO",
+    "category": "adulto",
+    "priceOriginal": 369.9,
+    "pricePromo": 184.95,
+    "sizes": "35 | 36 | 37 | 38 | 39/40",
+    "image": "https://cloviscalcados.vteximg.com.br/arquivos/ids/1710261-1024-1024/Melissa-Coturno-32822-0852822_001-02.jpg"
   }
 ]
