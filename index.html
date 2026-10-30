@@ -98,16 +98,22 @@
             return array;
         }
 
-        // --- SISTEMA DE TENTATIVA INTELIGENTE DE FOTO (.webp -> .jpg -> .png) ---
+        // --- SISTEMA DE TENTATIVA INTELIGENTE DE FOTO (.avif -> .webp -> .jpg -> .png) ---
         function handleImageError(imgElement, reference) {
             const currentSrc = imgElement.src;
             
-            if (currentSrc.includes('.webp') && !imgElement.dataset.triedJpg) {
+            if (currentSrc.includes('.avif') && !imgElement.dataset.triedWebp) {
+                imgElement.dataset.triedWebp = "true";
+                imgElement.src = currentSrc.replace('.avif', '.webp');
+            } else if (currentSrc.includes('.webp') && !imgElement.dataset.triedJpg) {
                 imgElement.dataset.triedJpg = "true";
                 imgElement.src = currentSrc.replace('.webp', '.jpg');
             } else if (currentSrc.includes('.jpg') && !imgElement.dataset.triedPng) {
                 imgElement.dataset.triedPng = "true";
                 imgElement.src = currentSrc.replace('.jpg', '.png');
+            } else if (!imgElement.dataset.triedDefaultAvif) {
+                imgElement.dataset.triedDefaultAvif = "true";
+                imgElement.src = `img/${reference}.avif`; 
             } else if (!imgElement.dataset.triedDefaultWebp) {
                 imgElement.dataset.triedDefaultWebp = "true";
                 imgElement.src = `img/${reference}.webp`; 
@@ -135,14 +141,14 @@
 
             randomizedItems.forEach(product => {
                 const discount = calculateDiscount(product.priceOriginal, product.pricePromo);
-                const imgName = product.imageFile || product.reference; // Puxa do json o nome mapeado
+                const imgName = product.imageFile || product.reference;
                 
-                // O site tenta primeiro o WEBP, se der erro o "onerror" assume o controle!
+                // O site tenta primeiro o .avif
                 const cardHtml = `
                     <div class="product-card">
                         <div class="discount-badge">${discount}% OFF</div>
                         <div class="img-container">
-                            <img src="img/${imgName}.webp" alt="${product.title}" class="product-img" loading="lazy" onerror="handleImageError(this, '${product.reference}')">
+                            <img src="img/${imgName}.avif" alt="${product.title}" class="product-img" loading="lazy" onerror="handleImageError(this, '${product.reference}')">
                         </div>
                         <div class="product-info">
                             <h3 class="product-title">${product.title}</h3>
