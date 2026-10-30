@@ -83,11 +83,11 @@
         function calculateDiscount(oldP, newP) { return Math.round(((oldP - newP) / oldP) * 100); }
 
         function getWhatsAppLink(product) {
-            const text = `Oi! Vi o catálogo e quero comprar o modelo:\n\n*${product.title}*\nPor: *${formatMoney(product.pricePromo)}*`;
+            const tituloLimpo = product.title.trim();
+            const text = `Oi Léo! Tudo bem? Vi o catálogo e quero verificar a disponibilidade deste modelo com você:\n\n*${tituloLimpo}*\nPor: *${formatMoney(product.pricePromo)}*`;
             return `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(text)}`;
         }
 
-        // Nova função para embaralhar os itens do array de forma aleatória
         function shuffleArray(array) {
             let currentIndex = array.length, randomIndex;
             while (currentIndex !== 0) {
@@ -96,6 +96,30 @@
                 [array[currentIndex], array[randomIndex]] = [array[randomIndex], array[currentIndex]];
             }
             return array;
+        }
+
+        // --- SISTEMA DE TENTATIVA INTELIGENTE DE FOTO (.webp -> .jpg -> .png) ---
+        function handleImageError(imgElement, reference) {
+            const currentSrc = imgElement.src;
+            
+            if (currentSrc.includes('.webp') && !imgElement.dataset.triedJpg) {
+                imgElement.dataset.triedJpg = "true";
+                imgElement.src = currentSrc.replace('.webp', '.jpg');
+            } else if (currentSrc.includes('.jpg') && !imgElement.dataset.triedPng) {
+                imgElement.dataset.triedPng = "true";
+                imgElement.src = currentSrc.replace('.jpg', '.png');
+            } else if (!imgElement.dataset.triedDefaultWebp) {
+                imgElement.dataset.triedDefaultWebp = "true";
+                imgElement.src = `img/${reference}.webp`; 
+            } else if (!imgElement.dataset.triedDefaultJpg) {
+                imgElement.dataset.triedDefaultJpg = "true";
+                imgElement.src = `img/${reference}.jpg`; 
+            } else if (!imgElement.dataset.triedDefaultPng) {
+                imgElement.dataset.triedDefaultPng = "true";
+                imgElement.src = `img/${reference}.png`; 
+            } else {
+                imgElement.src = 'https://via.placeholder.com/500x500?text=Sem+Foto'; 
+            }
         }
 
         function renderProducts(items) {
@@ -107,17 +131,18 @@
                 return;
             }
 
-            // Embaralha a lista antes de inseri-la no HTML
             const randomizedItems = shuffleArray([...items]);
 
             randomizedItems.forEach(product => {
                 const discount = calculateDiscount(product.priceOriginal, product.pricePromo);
+                const imgName = product.imageFile || product.reference; // Puxa do json o nome mapeado
                 
+                // O site tenta primeiro o WEBP, se der erro o "onerror" assume o controle!
                 const cardHtml = `
                     <div class="product-card">
                         <div class="discount-badge">${discount}% OFF</div>
                         <div class="img-container">
-                            <img src="${product.image}" alt="${product.title}" class="product-img" loading="lazy">
+                            <img src="img/${imgName}.webp" alt="${product.title}" class="product-img" loading="lazy" onerror="handleImageError(this, '${product.reference}')">
                         </div>
                         <div class="product-info">
                             <h3 class="product-title">${product.title}</h3>
@@ -150,11 +175,9 @@
         }
 
         document.addEventListener('DOMContentLoaded', () => { 
-            // Fetch puxando o JSON de produtos
             fetch('produtos.json')
                 .then(res => res.json())
                 .then(data => {
-                    // Armazena os dados sem a função '.sort()' que forçava a ordem pelo preço
                     products = data;
                     renderProducts(products);
                 })
