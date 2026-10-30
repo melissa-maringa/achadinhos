@@ -13,26 +13,23 @@
     <div class="container">
         <h2 class="mb-4">⚙️ Painel de Controle (Modo Estático)</h2>
 
-        <!-- AVISO SOBRE ESTATÍSTICAS -->
         <div class="row mb-4">
             <div class="col-12">
                 <div class="alert alert-warning shadow-sm" role="alert">
-                    <h5 class="alert-heading">📊 Cadê as Estatísticas?</h5>
-                    <p class="mb-0">Como o GitHub Pages não possui banco de dados (PHP), o contador interno de acessos foi desativado.<br>
-                    <strong>Solução:</strong> Para medir visitas e cliques com precisão no GitHub, recomendamos que você crie uma conta gratuita no <b>Google Analytics (GA4)</b> e cole o script deles no cabeçalho (<code>&lt;head&gt;</code>) do seu arquivo <code>index.html</code>.</p>
+                    <h5 class="alert-heading">📊 Estatísticas e GA4</h5>
+                    <p class="mb-0">Para medir os cliques no WhatsApp, recomendamos colar o script do <b>Google Analytics (GA4)</b> no arquivo index.html.</p>
                 </div>
             </div>
         </div>
 
         <div class="row">
-            <!-- FORMULÁRIO DE CADASTRO -->
             <div class="col-md-4 mb-4">
                 <div class="card shadow-sm p-4">
                     <h4>Adicionar Produto</h4>
                     <form id="formProduto">
                         <div class="mb-2">
-                            <label>Nome do Modelo</label>
-                            <input type="text" id="title" class="form-control" required>
+                            <label>Nome e Cor</label>
+                            <input type="text" id="title" class="form-control" placeholder="Ex: Melissa Coturno (Bege)" required>
                         </div>
                         <div class="mb-2">
                             <label>Categoria</label>
@@ -44,11 +41,11 @@
                         </div>
                         <div class="row mb-2">
                             <div class="col-6">
-                                <label>Preço "De" (R$)</label>
+                                <label>Preço "De"</label>
                                 <input type="number" step="0.01" id="oldPrice" class="form-control" placeholder="189.90" required>
                             </div>
                             <div class="col-6">
-                                <label>Preço "Por" (R$)</label>
+                                <label>Preço "Por"</label>
                                 <input type="number" step="0.01" id="newPrice" class="form-control" placeholder="79.90" required>
                             </div>
                         </div>
@@ -56,23 +53,25 @@
                             <label>Tamanhos Disponíveis</label>
                             <input type="text" id="sizes" class="form-control" placeholder="Ex: 35 | 36 | 38" required>
                         </div>
+                        <div class="mb-2">
+                            <label>Cód. Referência</label>
+                            <input type="text" id="reference" class="form-control" placeholder="Ex: 32822" required>
+                        </div>
                         <div class="mb-3">
-                            <label>Link da Imagem</label>
-                            <input type="url" id="image" class="form-control" placeholder="https://..." required>
+                            <label>Nome do Arquivo (Sem a extensão .jpg/.webp)</label>
+                            <input type="text" id="imageFile" class="form-control" placeholder="Ex: 32822-bege" required>
                         </div>
                         <button type="submit" class="btn btn-dark w-100">Adicionar à Lista</button>
                     </form>
                 </div>
             </div>
 
-            <!-- LISTA DE PRODUTOS E GERADOR -->
             <div class="col-md-8">
                 <div class="card shadow-sm p-4">
                     <div class="d-flex justify-content-between mb-3 align-items-center">
                         <h4 class="mb-0">Produtos Cadastrados</h4>
                         <button onclick="baixarJSON()" class="btn btn-success fw-bold">⬇️ BAIXAR PRODUTOS.JSON</button>
                     </div>
-                    <p class="text-muted small"><b>Instruções para o GitHub Pages:</b> Após clicar no botão acima, vá até a página do seu repositório no GitHub, clique em <b>"Add file" > "Upload files"</b>, envie o novo arquivo <code>produtos.json</code> substituindo o antigo e confirme o commit.</p>
                     <div class="table-responsive">
                         <table class="table table-striped align-middle">
                             <thead>
@@ -94,13 +93,11 @@
     <script>
         let catalogo = [];
 
-        // 1. CARREGAR PRODUTOS EXISTENTES PARA EDIÇÃO
         fetch('produtos.json')
             .then(res => res.json())
             .then(data => { catalogo = data; atualizarTabela(); })
             .catch(e => console.log('Iniciando catálogo vazio.'));
 
-        // 2. ADICIONAR NOVO PRODUTO
         document.getElementById('formProduto').addEventListener('submit', function(e) {
             e.preventDefault();
             const novo = {
@@ -110,21 +107,45 @@
                 priceOriginal: parseFloat(document.getElementById('oldPrice').value),
                 pricePromo: parseFloat(document.getElementById('newPrice').value),
                 sizes: document.getElementById('sizes').value,
-                image: document.getElementById('image').value
+                reference: document.getElementById('reference').value,
+                imageFile: document.getElementById('imageFile').value
             };
             catalogo.push(novo);
             atualizarTabela();
             this.reset();
         });
 
-        // 3. ATUALIZAR TABELA NA TELA
+        // O mesmo sistema inteligente aplicado ao Painel
+        function handlePanelImageError(img, ref) {
+            const currentSrc = img.src;
+            if (currentSrc.includes('.webp') && !img.dataset.triedJpg) {
+                img.dataset.triedJpg = "true";
+                img.src = currentSrc.replace('.webp', '.jpg');
+            } else if (currentSrc.includes('.jpg') && !img.dataset.triedPng) {
+                img.dataset.triedPng = "true";
+                img.src = currentSrc.replace('.jpg', '.png');
+            } else if (!img.dataset.triedDefaultWebp) {
+                img.dataset.triedDefaultWebp = "true";
+                img.src = `img/${ref}.webp`;
+            } else if (!img.dataset.triedDefaultJpg) {
+                img.dataset.triedDefaultJpg = "true";
+                img.src = `img/${ref}.jpg`;
+            } else if (!img.dataset.triedDefaultPng) {
+                img.dataset.triedDefaultPng = "true";
+                img.src = `img/${ref}.png`;
+            } else {
+                img.src = 'https://via.placeholder.com/40x40?text=Foto';
+            }
+        }
+
         function atualizarTabela() {
             const tbody = document.getElementById('tabelaCorpo');
             tbody.innerHTML = '';
             catalogo.forEach(item => {
+                const imgFile = item.imageFile || item.reference;
                 tbody.innerHTML += `
                     <tr>
-                        <td><img src="${item.image}" width="40" height="40" style="object-fit:cover; border-radius:5px;"></td>
+                        <td><img src="img/${imgFile}.webp" onerror="handlePanelImageError(this, '${item.reference}')" width="40" height="40" style="object-fit:cover; border-radius:5px;"></td>
                         <td>${item.title}<br><small class="text-muted">${item.category}</small></td>
                         <td>R$ ${item.pricePromo.toFixed(2).replace('.', ',')}</td>
                         <td><button onclick="removerItem(${item.id})" class="btn btn-sm btn-danger">Excluir</button></td>
@@ -133,16 +154,16 @@
             });
         }
 
-        // 4. REMOVER ITEM
         function removerItem(id) {
             catalogo = catalogo.filter(item => item.id !== id);
             atualizarTabela();
         }
 
-        // 5. GERAR E BAIXAR O ARQUIVO JSON NOVO
         function baixarJSON() {
             if(catalogo.length === 0) return alert("Adicione pelo menos 1 produto!");
-            const dataStr = JSON.stringify(catalogo, null, 2);
+            
+            const limpos = catalogo.map(({id, ...resto}) => resto);
+            const dataStr = JSON.stringify(limpos, null, 2);
             const blob = new Blob([dataStr], { type: "application/json" });
             const url = URL.createObjectURL(blob);
             const a = document.createElement('a');
