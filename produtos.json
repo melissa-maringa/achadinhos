@@ -31,7 +31,7 @@
   { "category": "adulto", "title": "Melissa Float Ad (Bege)", "priceOriginal": 199.9, "pricePromo": 99.9, "sizes": "36", "reference": "33915", "imageFile": "33915-bege" },
   { "category": "adulto", "title": "Melissa Free Low Ad (Preto)", "priceOriginal": 179.9, "pricePromo": 89.9, "sizes": "33/34", "reference": "36134", "imageFile": "36134-preto" },
   { "category": "adulto", "title": "Melissa Free Low Print Ad (Preto/Marrom)", "priceOriginal": 249.9, "pricePromo": 124.9, "sizes": "33/34, 35", "reference": "37830", "imageFile": "37830-preto-marrom" },
-  { "category": "adulto", "title": "Melissa Harmonic M Lover Ad (Azul/Prata)", "priceOriginal": 119.9, "pricePromo": 59.9, "sizes": "37", "reference": "35797", "imageFile": "35797-azul-prata" },
+
   { "category": "adulto", "title": "Melissa Sun Carioca Ad (Bege)", "priceOriginal": 89.9, "pricePromo": 44.9, "sizes": "33/34", "reference": "38067", "imageFile": "38067-bege" },
   { "category": "adulto", "title": "Melissa Sun Carioca Ad (Preto)", "priceOriginal": 89.9, "pricePromo": 44.9, "sizes": "33/34", "reference": "38067", "imageFile": "38067-preto" },
   { "category": "adulto", "title": "Melissa Sun Flip Flop Flatform Ad (Branco)", "priceOriginal": 159.9, "pricePromo": 95.9, "sizes": "35, 36", "reference": "37912", "imageFile": "37912-branco" },
@@ -55,7 +55,8 @@
   { "category": "adulto", "title": "Melissa Free Puff Slide + Disney Ad (Preto)", "priceOriginal": 249.9, "pricePromo": 124.9, "sizes": "37", "reference": "37883", "imageFile": "37883-preto" },
   { "category": "adulto", "title": "Melissa Free Puff Slide Ad (Bronze)", "priceOriginal": 199.9, "pricePromo": 99.9, "sizes": "35", "reference": "37722", "imageFile": "37722-bronze" },
   { "category": "adulto", "title": "Melissa M Lover Slide Deluxe Ad (Preto)", "priceOriginal": 299.9, "pricePromo": 179.9, "sizes": "38", "reference": "36015", "imageFile": "36015-preto" },
-  { "category": "infantil", "title": "Mini Melissa Cozy Slide Inf (Rosa/Glitter)", "priceOriginal": 179.9, "pricePromo": 71.9, "sizes": "28", "reference": "35685", "imageFile": "35685-rosa-glitter" },
+
+
   { "category": "infantil", "title": "Mini Melissa Duo M Lover Slide Inf (Rosa)", "priceOriginal": 129.9, "pricePromo": 77.9, "sizes": "26/27", "reference": "38092", "imageFile": "38092-rosa" },
   { "category": "infantil", "title": "Mini Melissa Duo M Lover Slide Inf (Branco/Prata)", "priceOriginal": 129.9, "pricePromo": 77.9, "sizes": "26/27, 29, 30", "reference": "38092", "imageFile": "38092-branco-prata" },
   { "category": "bebe", "title": "Mini Melissa Flowing Slide  + Disney (Verde/Lilas)", "priceOriginal": 219.9, "pricePromo": 131.9, "sizes": "26/27, 28, 29, 30, 31, 33", "reference": "37878", "imageFile": "37878-verde-lilas" },
@@ -70,7 +71,8 @@
   { "category": "adulto", "title": "Melissa Royal Plus Ad (Preto)", "priceOriginal": 379.9, "pricePromo": 265.9, "sizes": "35, 38, 39/40", "reference": "38028", "imageFile": "38028-preto" },
   { "category": "bebe", "title": "Mini Melissa Hip Daydream Bb (Bege Metalizado)", "priceOriginal": 139.9, "pricePromo": 83.9, "sizes": "20/21", "reference": "35903", "imageFile": "35903-bege-metalizado" },
   { "category": "bebe", "title": "Mini Melissa Hip Daydream Bb (Rosa Glitter)", "priceOriginal": 139.9, "pricePromo": 83.9, "sizes": "17/18, 19, 20/21, 22, 25, 26/27", "reference": "35903", "imageFile": "35903-rosa-glitter" },
-  { "category": "bebe", "title": "Mini Melissa Hip Daydream Bb (Rosa Glitter)", "priceOriginal": 139.9, "pricePromo": 83.9, "sizes": "17/18, 19, 20/21", "reference": "35903", "imageFile": "35903-rosa-glitter" },
+
+
   { "category": "bebe", "title": "Mini Melissa Hip Daydream Bb (Preto)", "priceOriginal": 139.9, "pricePromo": 83.9, "sizes": "22", "reference": "35903", "imageFile": "35903-preto" },
   { "category": "infantil", "title": "Mini Melissa June Inf (Rosa/Transparente)", "priceOriginal": 229.9, "pricePromo": 160.9, "sizes": "26/27", "reference": "36108", "imageFile": "36108-rosa-transparente" },
   { "category": "bebe", "title": "Mini Melissa Starry Bb (Rosa Perolado)", "priceOriginal": 149.9, "pricePromo": 104.9, "sizes": "17/18, 20/21, 22, 23/24, 26/27", "reference": "38051", "imageFile": "38051-rosa-perolado" },
@@ -79,12 +81,20 @@
   { "category": "bebe", "title": "Mini Melissa Zig + Disney Bb (Rosa Escuro)", "priceOriginal": 199.9, "pricePromo": 99.9, "sizes": "19, 26/27", "reference": "37346", "imageFile": "37346-rosa-escuro" },
   { "category": "bebe", "title": "Mini Melissa Zig + Disney Bb (Preto/Vermelho)", "priceOriginal": 199.9, "pricePromo": 99.9, "sizes": "19", "reference": "37346", "imageFile": "37346-preto-vermelho" },
   { "category": "bebe", "title": "Mini Melissa Zig + Disney Bb (Rosa Claro)", "priceOriginal": 199.9, "pricePromo": 99.9, "sizes": "19", "reference": "37346", "imageFile": "37346-rosa-claro" },
+
+
   { "category": "bebe", "title": "Mini Melissa Zig Bb (Bege/Cinza)", "priceOriginal": 159.9, "pricePromo": 79.9, "sizes": "23/24, 26/27", "reference": "36181", "imageFile": "36181-bege-cinza" },
+
+
+
   { "category": "adulto", "title": "Melissa Charm (Laranja/Lilas)", "priceOriginal": 59.9, "pricePromo": 41.9, "sizes": "UN", "reference": "34490", "imageFile": "34490-laranja-lilas" },
   { "category": "adulto", "title": "Melissa Charm (Lilas/Azul)", "priceOriginal": 59.9, "pricePromo": 41.9, "sizes": "UN", "reference": "34490", "imageFile": "34490-lilas-azul" },
   { "category": "infantil", "title": "Mini Melissa Playtime Discover Inf (Azul/Amarelo)", "priceOriginal": 199.9, "pricePromo": 99.9, "sizes": "29, 32", "reference": "38018", "imageFile": "38018-azul-amarelo" },
   { "category": "adulto", "title": "Melissa Cozy Platform Ad (Preto/Bege)", "priceOriginal": 289.9, "pricePromo": 144.9, "sizes": "35", "reference": "36158", "imageFile": "36158-preto-bege" },
   { "category": "adulto", "title": "Melissa Cozy Platform Ad (Rosa)", "priceOriginal": 289.9, "pricePromo": 144.9, "sizes": "35, 36", "reference": "36158", "imageFile": "36158-rosa" },
+
+
+
   { "category": "adulto", "title": "Melissa Edge Ad (Azul Perolado)", "priceOriginal": 399.9, "pricePromo": 159.9, "sizes": "35, 36, 37", "reference": "37804", "imageFile": "37804-azul-perolado" },
   { "category": "adulto", "title": "Melissa Edge Ad (Preto Perolado)", "priceOriginal": 399.9, "pricePromo": 159.9, "sizes": "35", "reference": "37804", "imageFile": "37804-preto-perolado" },
   { "category": "adulto", "title": "Melissa Ella Ad (Rosa)", "priceOriginal": 249.9, "pricePromo": 99.9, "sizes": "36", "reference": "35791", "imageFile": "35791-rosa" },
@@ -92,11 +102,19 @@
   { "category": "adulto", "title": "Melissa Flowing Platform Ad (Prata/Preto)", "priceOriginal": 269.9, "pricePromo": 107.9, "sizes": "35", "reference": "35817", "imageFile": "35817-prata-preto" },
   { "category": "adulto", "title": "Melissa Flowing Platform Denim Ad (Preto Jeans)", "priceOriginal": 319.9, "pricePromo": 127.9, "sizes": "35", "reference": "36132", "imageFile": "36132-preto-jeans" },
   { "category": "adulto", "title": "Melissa Free Platform Slide + Hello (Preto)", "priceOriginal": 379.9, "pricePromo": 227.9, "sizes": "35, 36, 37, 38", "reference": "37874", "imageFile": "37874-preto" },
+
+
+
   { "category": "adulto", "title": "Melissa Free Platform Slide + Hello (Bege/Marrom)", "priceOriginal": 379.9, "pricePromo": 227.9, "sizes": "35, 36", "reference": "37874", "imageFile": "37874-bege-marrom" },
   { "category": "adulto", "title": "Melissa Kick Off Sandal + Hello Kitt (Bege)", "priceOriginal": 379.9, "pricePromo": 227.9, "sizes": "38", "reference": "37876", "imageFile": "37876-bege" },
+
+
   { "category": "adulto", "title": "Melissa Kick Off Sandal Ad (Bege/Preto)", "priceOriginal": 299.9, "pricePromo": 149.9, "sizes": "37", "reference": "32823", "imageFile": "32823-bege-preto" },
   { "category": "adulto", "title": "Melissa Kick Off Sandal Ad (Bege/Glitter)", "priceOriginal": 299.9, "pricePromo": 149.9, "sizes": "36, 37, 38", "reference": "32823", "imageFile": "32823-bege-glitter" },
   { "category": "adulto", "title": "Melissa Megan Ad (Bege)", "priceOriginal": 299.9, "pricePromo": 119.9, "sizes": "38", "reference": "33835", "imageFile": "33835-bege" },
+
+
+
   { "category": "adulto", "title": "Melissa Pulse Ad (Marrom)", "priceOriginal": 299.9, "pricePromo": 179.9, "sizes": "35, 36, 37", "reference": "36854", "imageFile": "36854-marrom" },
   { "category": "adulto", "title": "Melissa Pulse Ad (Bege)", "priceOriginal": 299.9, "pricePromo": 179.9, "sizes": "33/34, 37", "reference": "36854", "imageFile": "36854-bege" },
   { "category": "adulto", "title": "Melissa Pulse Ad (Bege/Verde)", "priceOriginal": 299.9, "pricePromo": 179.9, "sizes": "37", "reference": "36854", "imageFile": "36854-bege-verde" },
@@ -104,30 +122,52 @@
   { "category": "adulto", "title": "Melissa Pump Platform Ad (Azul Escuro)", "priceOriginal": 319.9, "pricePromo": 159.9, "sizes": "37", "reference": "37802", "imageFile": "37802-azul-escuro" },
   { "category": "adulto", "title": "Melissa Stripes Platform M Lover Ad (Preto)", "priceOriginal": 249.9, "pricePromo": 149.9, "sizes": "36, 38", "reference": "37831", "imageFile": "37831-preto" },
   { "category": "adulto", "title": "Melissa Stripes Platform M Lover Ad (Rosa)", "priceOriginal": 249.9, "pricePromo": 149.9, "sizes": "37, 38", "reference": "37831", "imageFile": "37831-rosa" },
-  { "category": "adulto", "title": "Melissa Stripes Platform M Lover Ad (Preto)", "priceOriginal": 249.9, "pricePromo": 149.9, "sizes": "38", "reference": "37831", "imageFile": "37831-preto" },
+
+
+
   { "category": "adulto", "title": "Melissa Stripes Platform M Lover Ad (Bege)", "priceOriginal": 249.9, "pricePromo": 149.9, "sizes": "38", "reference": "37831", "imageFile": "37831-bege" },
   { "category": "adulto", "title": "Melissa Sun Barra Platform Ad (Rosa Claro)", "priceOriginal": 169.9, "pricePromo": 84.9, "sizes": "37", "reference": "36065", "imageFile": "36065-rosa-claro" },
   { "category": "adulto", "title": "Melissa Sun Downtown Platform Ad (Rosa Escuro)", "priceOriginal": 159.9, "pricePromo": 63.9, "sizes": "37", "reference": "35710", "imageFile": "35710-rosa-escuro" },
   { "category": "adulto", "title": "Melissa Sun Downtown Platform Ii Ad (Bege)", "priceOriginal": 219.9, "pricePromo": 109.9, "sizes": "35, 36", "reference": "36129", "imageFile": "36129-bege" },
+
+
   { "category": "adulto", "title": "Melissa Sun Sunset Platform Ad (Rosa)", "priceOriginal": 179.9, "pricePromo": 89.9, "sizes": "35, 36", "reference": "37430", "imageFile": "37430-rosa" },
   { "category": "infantil", "title": "Mini Melissa Ella Inf (Preto)", "priceOriginal": 219.9, "pricePromo": 109.9, "sizes": "30", "reference": "36442", "imageFile": "36442-preto" },
   { "category": "bebe", "title": "Mini Melissa Free Platform Slide + H (Vermelho/Branco)", "priceOriginal": 349.9, "pricePromo": 209.9, "sizes": "29", "reference": "37875", "imageFile": "37875-vermelho-branco" },
   { "category": "infantil", "title": "Mini Melissa Kick Off Sandal Inf (Rosa)", "priceOriginal": 269.9, "pricePromo": 134.9, "sizes": "26/27, 28, 29", "reference": "35692", "imageFile": "35692-rosa" },
   { "category": "bebe", "title": "Mini Melissa Sun Downtown Platform I (Lilas)", "priceOriginal": 149.9, "pricePromo": 89.9, "sizes": "26/27, 28, 30, 31, 32", "reference": "38064", "imageFile": "38064-lilas" },
   { "category": "bebe", "title": "Mini Melissa Sun Downtown Platform I (Rosa Claro)", "priceOriginal": 149.9, "pricePromo": 89.9, "sizes": "26/27, 28, 30, 31, 32, 33", "reference": "38064", "imageFile": "38064-rosa-claro" },
+
+
+
   { "category": "bebe", "title": "Mini Melissa Sun Downtown Platform I (Rosa Medio)", "priceOriginal": 149.9, "pricePromo": 89.9, "sizes": "26/27, 28, 29", "reference": "38064", "imageFile": "38064-rosa-medio" },
   { "category": "adulto", "title": "Melissa Free High Ad (Bege Medio)", "priceOriginal": 299.9, "pricePromo": 149.9, "sizes": "35", "reference": "36135", "imageFile": "36135-bege-medio" },
   { "category": "adulto", "title": "Melissa Free High Ad (Bege Claro)", "priceOriginal": 299.9, "pricePromo": 149.9, "sizes": "36", "reference": "36135", "imageFile": "36135-bege-claro" },
   { "category": "adulto", "title": "Melissa M Lover Heel Ad (Bege)", "priceOriginal": 299.9, "pricePromo": 149.9, "sizes": "37", "reference": "36221", "imageFile": "36221-bege" },
+
+
+
   { "category": "adulto", "title": "Melissa Mule Hype Ad (Azul Perolado)", "priceOriginal": 289.9, "pricePromo": 115.9, "sizes": "37", "reference": "36026", "imageFile": "36026-azul-perolado" },
   { "category": "adulto", "title": "Melissa Mule Hype Metallic Ad (Prata Escuro)", "priceOriginal": 299.9, "pricePromo": 119.9, "sizes": "33/34", "reference": "36497", "imageFile": "36497-prata-escuro" },
+
+
   { "category": "adulto", "title": "Melissa Vixen Ad (Azul Perolado)", "priceOriginal": 279.9, "pricePromo": 139.9, "sizes": "33/34", "reference": "32243", "imageFile": "32243-azul-perolado" },
+
+
   { "category": "infantil", "title": "Mini Melissa Vixen Inf (Rosa Transparente)", "priceOriginal": 269.9, "pricePromo": 134.9, "sizes": "30", "reference": "35783", "imageFile": "35783-rosa-transparente" },
   { "category": "adulto", "title": "Melissa Cassie Ad (Preto/Branco)", "priceOriginal": 129.9, "pricePromo": 64.9, "sizes": "37", "reference": "35930", "imageFile": "35930-preto-branco" },
   { "category": "adulto", "title": "Melissa Cleo Sandal Ad (Marrom)", "priceOriginal": 179.9, "pricePromo": 89.9, "sizes": "37", "reference": "37795", "imageFile": "37795-marrom" },
   { "category": "adulto", "title": "Melissa Cleo Sandal Ad (Preto)", "priceOriginal": 179.9, "pricePromo": 89.9, "sizes": "35, 36", "reference": "37795", "imageFile": "37795-preto" },
+
+
+
   { "category": "adulto", "title": "Melissa Duna Ad (Mearrom/Bege)", "priceOriginal": 189.9, "pricePromo": 94.9, "sizes": "33/34, 37, 38", "reference": "36121", "imageFile": "36121-mearrom-bege" },
   { "category": "adulto", "title": "Melissa Flowing Papete Ad (Bege/Rosa)", "priceOriginal": 219.9, "pricePromo": 87.9, "sizes": "36, 37", "reference": "33908", "imageFile": "33908-bege-rosa" },
+
+
+
+
+
   { "category": "adulto", "title": "Melissa Free Possession Ad (Bege)", "priceOriginal": 199.9, "pricePromo": 79.9, "sizes": "38, 42", "reference": "36096", "imageFile": "36096-bege" },
   { "category": "adulto", "title": "Melissa Free Possession Ad (Preto)", "priceOriginal": 199.9, "pricePromo": 79.9, "sizes": "42", "reference": "36096", "imageFile": "36096-preto" },
   { "category": "adulto", "title": "Melissa Glide Ad (Preto/Tartaruga)", "priceOriginal": 269.9, "pricePromo": 134.9, "sizes": "36, 37", "reference": "37867", "imageFile": "37867-preto-tartaruga" },
