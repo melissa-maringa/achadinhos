@@ -1045,15 +1045,6 @@
   },
   {
     "category": "adulto",
-    "title": "Melissa Cleo Sandal Ad (Marrom)",
-    "priceOriginal": 179.9,
-    "pricePromo": 89.9,
-    "sizes": "37",
-    "reference": "37795",
-    "imageFile": "37795-marrom"
-  },
-  {
-    "category": "adulto",
     "title": "Melissa Cleo Sandal Ad (Preto)",
     "priceOriginal": 179.9,
     "pricePromo": 89.9,
@@ -1204,15 +1195,6 @@
     "sizes": "38",
     "reference": "32408",
     "imageFile": "32408-verde-claro"
-  },
-  {
-    "category": "adulto",
-    "title": "Melissa Possession Ad (Bege Claro)",
-    "priceOriginal": 199.9,
-    "pricePromo": 99.9,
-    "sizes": "36",
-    "reference": "32408",
-    "imageFile": "32408-bege-claro"
   },
   {
     "category": "adulto",
@@ -1489,7 +1471,7 @@
     "title": "Mini Melissa Hip + Hello Kitty Bb (Preto/Branco)",
     "priceOriginal": 149.9,
     "pricePromo": 89.9,
-    "sizes": "17/18, 22",
+    "sizes": "17/18",
     "reference": "37872",
     "imageFile": "37872-preto-branco"
   },
